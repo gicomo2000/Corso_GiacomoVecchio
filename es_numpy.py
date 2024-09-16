@@ -38,3 +38,27 @@ print(somma)
 print("la somma è:", np.sum(somma))
 somma=np.array(somma[somma>5])
 print("la somma è:", np.sum(somma))
+
+
+
+#ESERCIZIO FINALE 1
+x=True
+
+while x:
+    dim=int(input("inserisci righe: "))
+    dim2=int(input("inserisci colonne: "))
+    arr5=np.random.randint(0,10,(dim,dim2))
+    menu=int(input("cosa vuoi fare? 1)sottomatrice 2)trasposto 3)somma elementi 4)esci ->"))
+    if menu==1:
+        sotto_matrice = arr5[1:dim-1, 1:dim2-1]
+        print(sotto_matrice)
+        break
+    elif menu==2:
+        print(arr5.T)
+        break
+    elif menu==3:
+        print("La somma degli elementi nella matrice è: ",np.sum(arr5))
+        break
+    else:
+        print("Ciao!")
+        break
