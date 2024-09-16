@@ -48,7 +48,7 @@ while x:
     dim=int(input("inserisci righe: "))
     dim2=int(input("inserisci colonne: "))
     arr5=np.random.randint(0,10,(dim,dim2))
-    menu=int(input("cosa vuoi fare? 1)sottomatrice 2)trasposto 3)somma elementi 4)esci ->"))
+    menu=int(input("cosa vuoi fare? 1)sottomatrice 2)trasposto 3)somma elementi 4)moltiplicazione con matrice stesse dimensioni 5)media elementi 6)esci ->"))
     if menu==1:
         sotto_matrice = arr5[1:dim-1, 1:dim2-1]
         print(sotto_matrice)
@@ -58,6 +58,14 @@ while x:
         break
     elif menu==3:
         print("La somma degli elementi nella matrice è: ",np.sum(arr5))
+        break
+    elif menu==4:
+        arr6=np.random.randint(0,10,(dim,dim2))
+        moltiplicata=arr5*arr6
+        print(moltiplicata)
+        break
+    elif menu==5:
+        print("La media degli elementi è: ",arr5.mean())
         break
     else:
         print("Ciao!")
