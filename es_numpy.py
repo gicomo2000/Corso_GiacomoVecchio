@@ -26,3 +26,15 @@ print(casuali)
 
 somma=re_arr2+casuali
 print(somma)
+
+
+
+arr3=np.linspace(0,10,50)
+print(arr3)
+arr4=np.random.random(50)
+print(arr4)
+somma=arr3+arr4
+print(somma)
+print("la somma è:", np.sum(somma))
+somma=np.array(somma[somma>5])
+print("la somma è:", np.sum(somma))
