@@ -24,7 +24,22 @@ print(tipo_dati)
 statistiche_descrittive=df.describe()
 print(statistiche_descrittive)
 
-duplicati=df.isna()
-print(duplicati)
-df_senza_duplicati=df.drop_duplicates()
-print(df_senza_duplicati)
+
+df=df.drop_duplicates()
+print(df)
+
+df['eta'].fillna(df['eta'].median(), inplace=True)
+print(df)
+
+def categoria_eta(num):
+    if num<19:
+        return "giovane"
+    elif num<66:
+        return "adulto"
+    else:
+        return "anziano"
+
+df["Categoria età"]=df["eta"].apply(categoria_eta)
+print(df)
+
+df.to_csv("esercizio.csv",index=True)
